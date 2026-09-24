@@ -1,0 +1,14 @@
+# compose.yaml
+services:
+  app:
+    build: .
+    volumes:
+      - .:/app
+      - go-cache:/go/pkg/mod
+    ports:
+      - "8080:8080"
+    environment:
+      GO_RUN_PATH: "."
+
+volumes:
+  go-cache:
