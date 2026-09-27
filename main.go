@@ -19,11 +19,15 @@
 */
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"github.com/julianysavazzi/go-api/printer"
+)
 
 func main() {
 	fmt.Println("Hello World")
 	fmt.Printf("My Name is %s\n", "Juliany")
 	fmt.Printf("I am %d years old\n", 25)
 	fmt.Printf("I am %f meters tall\n", 1.56)
+	printer.PrintMessage("Hello from printer package")
 }
