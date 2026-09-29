@@ -22,6 +22,7 @@ package main
 import (
 	"fmt"
 	"github.com/julianysavazzi/go-api/printer"
+	"github.com/julianysavazzi/go-api/variables"
 )
 
 func main() {
@@ -30,4 +31,5 @@ func main() {
 	fmt.Printf("I am %d years old\n", 25)
 	fmt.Printf("I am %f meters tall\n", 1.56)
 	printer.PrintMessage("Hello from printer package")
+	variables.PrintVariables()
 }
