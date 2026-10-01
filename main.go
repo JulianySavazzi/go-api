@@ -60,7 +60,22 @@ func main() {
 		} else {
 			fmt.Println("n is odd number\n")
 		}
-		
+
 		n += 1
+	}
+
+	for i := 0; i < 10; i++ {
+		fmt.Printf("i %d is less than 10\n", i)
+		evenNumber := i % 2 == 0
+
+		if evenNumber && i > 2 {
+			continue
+		}
+
+		fmt.Println("here")
+
+		if i == 5 {
+			break
+		}
 	}
 }
