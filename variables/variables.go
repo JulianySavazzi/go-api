@@ -2,8 +2,21 @@ package variables
 
 import "fmt"
 
+// global scope in package
+
+const Pi float64 = 3.14159 // declaration of a constant (can't be changed, may be declared and attributed)
+
+const timeToSleepInSeconds = 500
+
+var test string
+
 // strongly and staticly typed programming language
 func PrintVariables() {
+	// function scope
+
+	test = "teste"
+	fmt.Println(test)
+
 	x := "Hello World" // explicit declaration and attribution of value, static type of x is string
 	fmt.Println(x) // references to x
 
@@ -27,4 +40,20 @@ func PrintVariables() {
 	var h bool
 	h = true
 	fmt.Println(h)
+
+	var i rune
+	i = 'a'
+	fmt.Println(i)
+
+	fmt.Println(Pi)
+
+	fmt.Println(timeToSleepInSeconds)
+
+	showString(test)
+	showString("Oi")
+
+}
+
+func showString(text string) {
+	fmt.Println(text)
 }
