@@ -25,6 +25,8 @@ import (
 	"github.com/julianysavazzi/go-api/variables"
 )
 
+const MAX int = 1000
+
 func main() {
 	fmt.Println("Hello World")
 	fmt.Printf("My Name is %s\n", "Juliany")
@@ -32,4 +34,33 @@ func main() {
 	fmt.Printf("I am %f meters tall\n", 1.56)
 	printer.PrintMessage("Hello from printer package")
 	variables.PrintVariables()
+
+	n := 10
+
+	// Flow control - choice what code lines to run
+	if n < MAX {
+		fmt.Printf("n %d is less than MAX %d \n", n, MAX)
+	} else {
+		fmt.Printf("n %d is greater than or equal to MAX %d \n", n, MAX)
+	}
+
+	expression := n < MAX
+	switch expression {
+	case true:
+		fmt.Printf("n %d is less than MAX %d \n", n, MAX)
+	case false:
+		fmt.Printf("n %d is greater than or equal to MAX %d \n", n, MAX)
+	}
+
+	for n < (MAX - 950) {
+		fmt.Printf("n %d is less than %d\n", n, (MAX - 950))
+
+		if n % 2 == 0 {
+			fmt.Println("n is even number\n")
+		} else {
+			fmt.Println("n is odd number\n")
+		}
+		
+		n += 1
+	}
 }
