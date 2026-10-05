@@ -23,6 +23,7 @@ import (
 	"fmt"
 	"github.com/julianysavazzi/go-api/printer"
 	"github.com/julianysavazzi/go-api/variables"
+	"github.com/julianysavazzi/go-api/math"
 )
 
 const MAX int = 1000
@@ -50,6 +51,8 @@ func main() {
 		fmt.Printf("n %d is less than MAX %d \n", n, MAX)
 	case false:
 		fmt.Printf("n %d is greater than or equal to MAX %d \n", n, MAX)
+	default:
+		fmt.Println("n is equal to MAX")
 	}
 
 	for n < (MAX - 950) {
@@ -78,4 +81,23 @@ func main() {
 			break
 		}
 	}
+
+	// can be infinite foor, does not have while loop in GO
+	for {
+		n = n+1;
+		fmt.Println(n)
+		if n >= 10 {
+			break
+		}
+	}
+
+	sum := math.Add(1, 2)
+	sub := math.Subtract(10, 6)
+	mult := math.Multiply(10, 2)
+	div := math.Divide(10, 2)
+
+	fmt.Printf("Sum: %d\n", sum)
+	fmt.Printf("Subtract: %d\n", sub)
+	fmt.Printf("Multiply: %d\n", mult)
+	fmt.Printf("Divide: %d\n", div)
 }

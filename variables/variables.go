@@ -51,7 +51,6 @@ func PrintVariables() {
 
 	showString(test)
 	showString("Oi")
-
 }
 
 func showString(text string) {

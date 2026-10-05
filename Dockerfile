@@ -6,5 +6,5 @@ COPY . .
 
 EXPOSE 8080
 
-CMD ["sh", "-c", "go run ${GO_RUN_PATH:-.}"]
+CMD ["sh", "-c", "tail -f /dev/null"]
 
