@@ -100,4 +100,11 @@ func main() {
 	fmt.Printf("Subtract: %d\n", sub)
 	fmt.Printf("Multiply: %d\n", mult)
 	fmt.Printf("Divide: %d\n", div)
+	fmt.Printf("Mod: %d\n", math.Mod(10, 2))
+
+	result := math.Add(10, 100) // creation and attribution
+	fmt.Printf("Result: %d\n", result)
+
+	result = math.Subtract(result, 10) // reattribution
+	fmt.Printf("Result: %d\n", result)
 }
