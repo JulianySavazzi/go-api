@@ -94,12 +94,12 @@ func main() {
 	sum := math.Add(1, 2)
 	sub := math.Subtract(10, 6)
 	mult := math.Multiply(10, 2)
-	div := math.Divide(10, 2)
+	div, e := math.Divide(10, 2)
 
 	fmt.Printf("Sum: %d\n", sum)
 	fmt.Printf("Subtract: %d\n", sub)
 	fmt.Printf("Multiply: %d\n", mult)
-	fmt.Printf("Divide: %d\n", div)
+	fmt.Printf("Divide: %d | error %s\n", div, e)
 	fmt.Printf("Mod: %d\n", math.Mod(10, 2))
 
 	result := math.Add(10, 100) // creation and attribution
@@ -107,4 +107,13 @@ func main() {
 
 	result = math.Subtract(result, 10) // reattribution
 	fmt.Printf("Result: %d\n", result)
+
+	// fmt.Println(math.DivideExample(10, 0))
+	var err error
+	result, err = math.Divide(10, 0)
+	if err != nil {
+		fmt.Println(err)
+	}
+	fmt.Printf("Result: %d\n", result)
+
 }
