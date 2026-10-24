@@ -23,17 +23,25 @@ import (
 	"fmt"
 	"os"
 	"github.com/julianysavazzi/go-api/printer"
+	"github.com/julianysavazzi/go-api/math"
 )
 
 func main() {
     // this func must contains all essential basic functions for learning go
-    // printer.Printing()
+//     printer.Printing()
 
-    op := os.Args[1]
-    n1 := os.Args[2]
-    n2 := os.Args[3]
+    args := os.Args // slice -> list of values
+
+//     op := os.Args[1]
+//     n1 := os.Args[2]
+//     n2 := os.Args[3]
 
     printer.PrintMessage("Type an operation, and two numbers:")
+    fmt.Printf("Arguments %d \n", args)
+//     fmt.Printf("Executing a operation %s with values %d and %d\n", op, n1, n2)
 
-    fmt.Printf("Executing a operation %s with values %d and %d\n", op, n1, n2)
+    division, err := math.Divide(10, 2)
+    fmt.Printf("Division %d, error %s\n", division, err)
+
+// go mod tidy
 }
