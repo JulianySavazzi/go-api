@@ -43,5 +43,13 @@ func main() {
     division, err := math.Divide(10, 2)
     fmt.Printf("Division %d, error %s\n", division, err)
 
-// go mod tidy
+// go mod tidy:
+// for update go.mod and go.sum with dependencies (external libs), used in your code and
+// to remove unused dependencies from your go.mod and go.sum
+
+// go get:
+// for make download by external specific dependencies and update go.mod and go.sum
+
+// go mod init:
+// for create go.mod for manage dependencies and modules
 }
