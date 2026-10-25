@@ -52,4 +52,27 @@ func main() {
 
 // go mod init:
 // for create go.mod for manage dependencies and modules
+
+    // using struct
+    var p Person
+    p.Name = "Juliany"
+    p.Surname = "Savazzi"
+    p.Age = 26
+    p.City = "Votuporanga"
+
+    fmt.Printf("Person %+v\n", p)
+
+    p2 := Person{ "Matheus", "Paula", 28, "Ilha Solteira"}
+
+    fmt.Printf("Person %+v\n", p2)
+
+    fmt.Println(p.Greeting())
+    helloMath := p2.Greeting()
+    fmt.Println(helloMath)
+
+    p3 := NewPerson("Bruno", "Savazzi", 22, "Votuporanga")
+    fmt.Println(p3)
+
+    p3.IncrementAge()
+    fmt.Println(p3.Age)
 }
